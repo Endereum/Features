@@ -2,6 +2,7 @@
 var randomString;
 var globalShareVariable;
 var privateInternalVariable;
+//final RegExp _validChannelNames = RegExp('^[a-zA-Z_][a-zA-Z0-9]*\$');
 
 // Function to generate random number
 function makeRandomString(length) {
@@ -22,7 +23,6 @@ function generateRandomNumber() {
   $('#random-number-span-display').text(randomString);
   if (AppCall !=== 'undefined') {
     AppCall.postMessage('getVIN');
-    globalShareVariable = "From JS Function";
   } else {
     console.debug('Not running inside a Flutter webview');
   }
