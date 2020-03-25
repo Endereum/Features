@@ -21,7 +21,7 @@ function generateRandomNumber() {
 
   // Showing Random String in HTML
   $('#random-number-span-display').text(randomString);
-  if (AppCall !=== 'undefined') {
+  if (AppCall !== 'undefined') {
     AppCall.postMessage('getVIN');
   } else {
     console.debug('Not running inside a Flutter webview');
