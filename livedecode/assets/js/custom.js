@@ -18,21 +18,20 @@ function makeRandomString(length) {
 function generateRandomNumber() {
   randomString = makeRandomString(16);
 
-  // Printing Random String 
+  // Showing Random String in HTML
   $('#random-number-span-display').text(randomString);
 }
 
-/** Interval based program checks
- * variable 2 times in one second */
+/** Checks variable 2 times in one second */
 setTimeout(() => {
   if(globalShareVariable){
 
     if(globalShareVariable != privateInternalVariable){
-      // use id global-variable-display to display global variable
+      // using id global-variable-display to display global variable
       $('#global-variable-display').text(String(globalShareVariable));
 
-      /** Save global variable to private internal
-       * variable for coss check */
+      /** Save global variable to private internal variable
+       * for cross check */
       privateInternalVariable = globalShareVariable;
     }
   }
