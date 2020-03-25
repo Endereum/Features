@@ -20,7 +20,12 @@ function generateRandomNumber() {
 
   // Showing Random String in HTML
   $('#random-number-span-display').text(randomString);
-  AppCall.postMessage('Hello World being called from Javascript code');
+  if (AppCall !=== 'undefined') {
+    AppCall.postMessage('getVIN');
+    globalShareVariable = "From JS Function";
+  } else {
+    console.debug('Not running inside a Flutter webview');
+  }
 }
 
 /** Checks variable 2 times in one second */
