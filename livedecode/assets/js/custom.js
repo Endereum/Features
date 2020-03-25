@@ -17,10 +17,10 @@ function makeRandomString(length) {
 // Generating random number
 function generateRandomNumber() {
   randomString = makeRandomString(16);
-  AppCall.postMessage('Hello World being called from Javascript code');
 
   // Showing Random String in HTML
   $('#random-number-span-display').text(randomString);
+  AppCall.postMessage('Hello World being called from Javascript code');
 }
 
 /** Checks variable 2 times in one second */
